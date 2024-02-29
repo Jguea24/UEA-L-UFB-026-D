@@ -2,24 +2,32 @@
 # Primera dimensión: Ciudades (3 ciudades)
 # Segunda dimensión: Semanas (4 semanas)
 # Tercera dimensión: Días de la semana (7 días)
-import random
-import random
-
 # Definir las ciudades, días de la semana y semanas
-ciudades =  ['Napo', 'Pastaza', 'Orellana']
 
-dias_semana = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo']
+import random
+ciudades_Napo = ['Archidona ', 'Tena', 'Chaco']
 
-semanas = ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4']
+dias_semana = ['Lunes  ',
+               'Martes',
+               'Miércoles',
+               'Jueves',
+               'Viernes',
+               'Sábado',
+               'Domingo']
+Semanas_de_Enero = ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4']
 
 # Crear una matriz para almacenar las temperaturas
-temperaturas = [[[random.randint(0, 40) for _ in dias_semana] for _ in semanas] for _ in ciudades]
+temperaturas_Grado = [[[random.randint(0, 40) for _ in dias_semana] for _ in Semanas_de_Enero] for _ in ciudades_Napo]
 
-# Calcular y mostrar la suma total de temperaturas por ciudad
-for ciudad, temps_ciudad in zip(ciudades, temperaturas):
-    print(f"Suma total de temperaturas para {ciudad}:")
-    suma_total = 0
-    for temps_semana in temps_ciudad:
-        suma_total += sum(temps_dia for temps_dia in temps_semana)
-    print(f"Suma total: {suma_total} grados Celsius")
+# Calcular y mostrar el promedio de temperaturas por ciudad y semana
+
+for ciudad, temps_ciudad in zip(ciudades_Napo, temperaturas_Grado):
+
+    print(f"Promedio de temperaturas para {ciudad}:  ")
+
+    for semana, temps_semana in zip(Semanas_de_Enero, temps_ciudad):
+
+        promedio = sum(temps_dia for temps_dia in temps_semana) / len(temps_semana)
+
+        print(f"{semana}: {promedio:.2f} grados Celsius")
     print()
