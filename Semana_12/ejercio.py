@@ -2,7 +2,7 @@
 # Primera dimensión: Ciudades (3 ciudades)
 # Segunda dimensión: Semanas (4 semanas)
 # Tercera dimensión: Días de la semana (7 días)
-import random
+#import random
 import random
 
 # Definir las ciudades, días de la semana y semanas
