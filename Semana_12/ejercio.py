@@ -9,7 +9,7 @@ ciudades =['Tena', 'Archidona', 'Chaco']
 
 Dia_semana = ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo']
 
-Semanas_Enero = ['Semana1', 'Semana2', 'Semana3']
+Semanas_Enero = ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4']
 
 # Almacenamiento de matriz de temperaturas
 
