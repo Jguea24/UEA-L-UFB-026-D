@@ -15,4 +15,4 @@ grados_fahrenheit, kelvin = convertir_Celsius(celsius)
 # Imprimir los resultados
 print(f"{celsius} grados Celsius equivalen a {grados_fahrenheit} grados Fahrenheit ")
 
-print(f'{grados_fahrenheit} grrados Fahrenheit  equivale a {kelvin} kelvin')
+print(f'{grados_fahrenheit} grados Fahrenheit  equivale a {kelvin} kelvin')

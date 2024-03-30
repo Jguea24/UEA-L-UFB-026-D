@@ -1,7 +1,7 @@
 #  función temperatura_promedio_ciudad calcula el
 #  promedio de temperatura semanal para una ciudad específica
-def tem_pro_ci(ciudad_datos):
-    prom_semanales = []
+def temparatura(ciudad_datos):
+    semanales = []
 
     # Iteramos sobre cada semana en los datos de la ciudad
     for semana in ciudad_datos:
@@ -10,29 +10,35 @@ def tem_pro_ci(ciudad_datos):
         # Calculamos el promedio de temperatura de la semana y
         # lo agregamos a la lista de promedios
         promedio_semanal = suma_tem / len(semana)
-        prom_semanales.append(promedio_semanal)
+        semanales.append(promedio_semanal)
 
     # Calculamos el promedio general de la ciudad
-    promedio_gen = sum(prom_semanales) / len(prom_semanales)
+    promedio_gen = sum(semanales) / len(semanales)
     return promedio_gen
 
 
 #  Creamos una funcion calcular_temperatura_promedio
 #  toma los datos específicos de cada ciudad y calcula el promedio de temperatura
-def cal_temp_pro(datos_ciudades):
+def temperatura_ciudades(datos_ciudades):
     for ciudad_datos in datos_ciudades:
         for ciudad_nombre, datos_ciudad in ciudad_datos.items():
             # calcula el promedio de temperatura
-            promedio_ciudad = tem_pro_ci(datos_ciudad)
+            promedio_ciudad = temparatura(datos_ciudad)
+
             print(" \n ======================================================>")
+
             print(f"El promedio de temperatura en {ciudad_nombre} es: {promedio_ciudad:.2f}°Celsius")
+
+            print(" \n ======================================================>")
+
+
 
 
 # Ejemplo de uso
 
 # Ejemplo de uso
 datos_ciudades = [
-    {"Tena": [
+    {"Esmeralda": [
         # Datos de Archidona...
         [  # SEMANA 1
             {"Dia": "Lunes", "Temperatura": 30},
@@ -72,7 +78,7 @@ datos_ciudades = [
         ],
     ]},
 
-    {"Archidona": [
+    {"Ambato": [
         # Datos de Archidona
         [  # SEMANA 1
             {"Dia": "Lunes", "Temperatura": 35},
@@ -113,7 +119,7 @@ datos_ciudades = [
 
     ]},
 
-    {"Puyo": [
+    {"Manabi": [
         [  # SEMANA 1
             {"Dia": "Lunes", "Temperatura": 35},
             {"Dia": "Martes", "Temperatura": 26},
@@ -154,5 +160,4 @@ datos_ciudades = [
     ]}
 ]
 
-cal_temp_pro(datos_ciudades)
-
+temperatura_ciudades(datos_ciudades)
